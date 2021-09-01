@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+import ExpenseItem from './components/Expenses/ExpenseItem';
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
+
+  const onFormSubmit = (data) => {
+    console.log('Data received', data)
+  }
+  
   const expenses = [
     {
       title: "Internet",
@@ -40,6 +45,7 @@ function App() {
 
   return (
     <div className="App">
+      <NewExpense onFormSubmit={onFormSubmit}></NewExpense>
       <ul className="expenses-list">
         {expensesList}
       </ul>
