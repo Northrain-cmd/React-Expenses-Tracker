@@ -23,14 +23,14 @@ const ExpenseForm = (props) => {
 
     setState({
       title: '', 
-      amount: '', 
+      price: '', 
       date: ''
     });
   }
 
   const [state, setState] = useState({
     title: '', 
-    amount: '', 
+    price: '', 
     date: ''
   });
   
@@ -42,8 +42,8 @@ const ExpenseForm = (props) => {
           <input value={state.title} onChange={setUserInput} type="text" name='title' id='title'/>
         </div>
         <div className="new-expense__control">
-          <label htmlFor="amount">Amount</label>
-          <input value={state.amount} onChange={setUserInput} type="number" min='0.01' step='0.01' name='amount' id='amount'/>
+          <label htmlFor="price">Amount</label>
+          <input value={state.price} onChange={setUserInput} type="number" min='0.01' step='0.01' name='price' id='price'/>
         </div>
         <div className="new-expense__control">
           <label htmlFor="date">Date</label>
